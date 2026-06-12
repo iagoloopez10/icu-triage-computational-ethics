@@ -1,0 +1,19 @@
+name: computational-ethics-lesson-03
+
+services:
+  kotlin:
+    build:
+      context: .
+      dockerfile: docker/kotlin.Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: ["bash", "./scripts/run-agent-local.sh"]
+
+  texlive:
+    image: ghcr.io/xu-cheng/texlive-full:latest
+    working_dir: /workspace/slides
+    volumes:
+      - ./slides:/workspace/slides
+      - ./examples:/workspace/examples:ro
+    entrypoint: ["latexmk"]

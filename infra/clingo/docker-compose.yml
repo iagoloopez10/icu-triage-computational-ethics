@@ -1,0 +1,19 @@
+name: computational-ethics-lesson-01
+
+services:
+  clingo:
+    build:
+      context: .
+      dockerfile: docker/clingo.Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ./examples:/workspace/examples
+    entrypoint: ["python", "-m", "clingo"]
+
+  texlive:
+    image: ghcr.io/xu-cheng/texlive-full:latest
+    working_dir: /workspace/slides
+    volumes:
+      - ./slides:/workspace/slides
+      - ./examples:/workspace/examples:ro
+    entrypoint: ["latexmk"]

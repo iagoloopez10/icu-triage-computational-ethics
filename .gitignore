@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Gradle/Kotlin
+.gradle/
+build/
+*.class
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Docker
+.docker/
+
+# Resultados generados
+results/*.json
+results/*.log
+
+# Report intermedios
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.synctex.gz
