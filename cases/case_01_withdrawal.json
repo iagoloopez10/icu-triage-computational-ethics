@@ -1,0 +1,14 @@
+{
+  "id": "case_01_withdrawal",
+  "description": "Withdrawing ventilator from a stable patient to reassign it to a newcomer with better expected outcomes.",
+  "facts_file": "cases/case_01_withdrawal.lp",
+  "lottery_seed": 42,
+  "ross_duties_at_stake": ["fidelity", "non_maleficence", "beneficence"],
+  "expected_layer1_decision": {
+    "assigned_patients": ["p2", "p3"],
+    "unassigned_eligible": ["p1"],
+    "withdrawals": [{"patient": "p1", "ventilator": "v1"}]
+  },
+  "expected_layer2_verdict": "questionable",
+  "audit_notes": "Withdrawal violates fidelity (clinical commitment already made) and triggers non-maleficence under the act/omission asymmetry. Beneficence favors the decision but does not clearly dominate."
+}

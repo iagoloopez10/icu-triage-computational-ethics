@@ -29,5 +29,5 @@ Work in progress.
 
 The execution infrastructure under `infra/clingo/` and `infra/arg2p/` is
 derived from materials provided by Prof. G. Pisano for the Computational
-Ethics 2026 course. See `infra/README_ATTRIBUTION.md`.
+Ethics 2026 course.
 

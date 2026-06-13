@@ -1,0 +1,14 @@
+{
+  "id": "case_05_healthcare_worker",
+  "description": "Healthcare worker with worse individual outcomes is selected by Layer 1 due to instrumental_lives_factor=5. Layer 2 audits whether instrumental utility defensibly overrides equal consideration.",
+  "facts_file": "cases/case_05_healthcare_worker.lp",
+  "lottery_seed": 42,
+  "ross_duties_at_stake": ["beneficence", "justice", "equal_consideration", "gratitude"],
+  "expected_layer1_decision": {
+    "assigned_patients": ["p1"],
+    "unassigned_eligible": ["p2"],
+    "withdrawals": []
+  },
+  "expected_layer2_verdict": "questionable",
+  "audit_notes": "Rule-utilitarian argument encoded in Layer 1 via instrumental_lives_factor. Layer 2 must scrutinize empirical grounding of the factor and counterargue from equal consideration."
+}

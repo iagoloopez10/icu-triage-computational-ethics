@@ -1,0 +1,14 @@
+{
+  "id": "case_02_pregnancy",
+  "description": "Pregnant patient (28 weeks) excluded by Layer 1 due to marginally worse outcomes. Layer 2 must evaluate third-party duty toward the fetus.",
+  "facts_file": "cases/case_02_pregnancy.lp",
+  "lottery_seed": 42,
+  "ross_duties_at_stake": ["beneficence", "justice", "third_party_consideration"],
+  "expected_layer1_decision": {
+    "assigned_patients": ["p1", "p3"],
+    "unassigned_eligible": ["p2"],
+    "withdrawals": []
+  },
+  "expected_layer2_verdict": "questionable",
+  "audit_notes": "Fetus is not a separate patient but enters as defeasible consideration. Outcome gap is small (~600 centi-years on ~6000), making the third-party argument plausibly decisive."
+}

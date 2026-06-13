@@ -1,0 +1,14 @@
+{
+  "id": "case_03_disability",
+  "description": "QALY tier excludes a patient with permanent disability despite identical clinical outcomes.",
+  "facts_file": "cases/case_03_disability.lp",
+  "lottery_seed": 42,
+  "ross_duties_at_stake": ["justice", "non_maleficence", "equal_consideration"],
+  "expected_layer1_decision": {
+    "assigned_patients": ["p2"],
+    "unassigned_eligible": ["p1"],
+    "withdrawals": []
+  },
+  "expected_layer2_verdict": "indefensible",
+  "audit_notes": "Central case for the report's critique of QALY. Patients identical clinically; sole discriminator is a quality weight derived from disability state."
+}
