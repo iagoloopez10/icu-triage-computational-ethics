@@ -1,0 +1,32 @@
+{
+  "case_id": "case_03_disability",
+  "engine": "clingo-5.6.2",
+  "rules_file": "engine/rules.lp",
+  "case_file": "cases/case_03_disability.lp",
+  "seed": 42,
+  "objective_values": {
+    "lives": 1,
+    "life_years": 3200,
+    "qalys": 304000
+  },
+  "n_tied_optimal_models": 1,
+  "selected_model_index": 0,
+  "assigned": [
+    [
+      "p2",
+      "v1"
+    ]
+  ],
+  "withdrawn": [],
+  "all_tied_optimal_models": [
+    {
+      "assigned": [
+        [
+          "p2",
+          "v1"
+        ]
+      ],
+      "withdrawn": []
+    }
+  ]
+}

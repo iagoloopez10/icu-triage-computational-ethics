@@ -22,45 +22,35 @@ if [ $# -ge 2 ]; then
 else
     JSON_FILE="${CASE_FILE%.lp}.json"
     if [ -f "$JSON_FILE" ]; then
-        SEED=$(grep -oP '"lottery_seed"\s*:\s*\K\d+' "$JSON_FILE" || echo "42")
+        SEED=$(python3 -c "import json; print(json.load(open('$JSON_FILE')).get('lottery_seed', 42))")
     else
         SEED=42
     fi
 fi
 
-OUTPUT=$(clingo --opt-mode=optN --models 0 engine/rules.lp "$CASE_FILE") || true
+CLINGO_EXIT=0
+OUTPUT=$(clingo --opt-mode=optN --models 0 engine/rules.lp "$CASE_FILE") || CLINGO_EXIT=$?
+
+case $CLINGO_EXIT in
+    10|30) ;;
+    20)
+        echo "clingo: UNSATISFIABLE — no feasible assignment for $CASE_FILE" >&2
+        exit 3
+        ;;
+    *)
+        echo "clingo: unexpected exit code $CLINGO_EXIT (expected 10/20/30)" >&2
+        exit 4
+        ;;
+esac
 
 echo "=== Engine output ==="
 echo "$OUTPUT"
 echo
 
-OPTIMAL=$(echo "$OUTPUT" | grep -oP 'Optimal\s*:\s*\K\d+' || echo "")
-if [ -z "$OPTIMAL" ]; then
-    if echo "$OUTPUT" | grep -q "OPTIMUM FOUND"; then
-        OPTIMAL=1
-    else
-        echo "No optimum found." >&2
-        exit 3
-    fi
-fi
+CASE_ID=$(basename "${CASE_FILE%.lp}")
 
-# Extract every "Answer:" block's payload (concatenated until "Optimization:")
-MODELS=$(echo "$OUTPUT" | awk '
-    /^Answer:/ { capture=1; payload=""; next }
-    /^Optimization:/ { if (capture) { print payload; capture=0 } next }
-    capture { payload = payload " " $0 }
-')
-
-# Take the last $OPTIMAL models (those sharing the final optimum)
-OPTIMAL_MODELS=$(echo "$MODELS" | tail -n "$OPTIMAL")
-
-# Seeded random selection via Python (more reliable than shuf for seeding)
-SELECTED=$(echo "$OPTIMAL_MODELS" | python3 -c "
-import sys, random
-models = [l.strip() for l in sys.stdin if l.strip()]
-random.seed($SEED)
-print(random.choice(models))
-")
-
-echo "=== Lottery (seed=$SEED, $OPTIMAL tied model(s)) ==="
-echo "Selected: $SELECTED"
+echo "$OUTPUT" | python3 emit_result.py \
+    --case-id "$CASE_ID" \
+    --rules-file "engine/rules.lp" \
+    --case-file "$CASE_FILE" \
+    --seed "$SEED"

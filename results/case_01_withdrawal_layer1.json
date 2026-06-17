@@ -1,0 +1,68 @@
+{
+  "case_id": "case_01_withdrawal",
+  "engine": "clingo-5.6.2",
+  "rules_file": "engine/rules.lp",
+  "case_file": "cases/case_01_withdrawal.lp",
+  "seed": 42,
+  "objective_values": {
+    "lives": 2,
+    "life_years": 5600,
+    "qalys": 520000
+  },
+  "n_tied_optimal_models": 2,
+  "selected_model_index": 0,
+  "assigned": [
+    [
+      "p3",
+      "v1"
+    ],
+    [
+      "p2",
+      "v2"
+    ]
+  ],
+  "withdrawn": [
+    [
+      "p1",
+      "v1"
+    ]
+  ],
+  "all_tied_optimal_models": [
+    {
+      "assigned": [
+        [
+          "p3",
+          "v1"
+        ],
+        [
+          "p2",
+          "v2"
+        ]
+      ],
+      "withdrawn": [
+        [
+          "p1",
+          "v1"
+        ]
+      ]
+    },
+    {
+      "assigned": [
+        [
+          "p2",
+          "v1"
+        ],
+        [
+          "p3",
+          "v2"
+        ]
+      ],
+      "withdrawn": [
+        [
+          "p1",
+          "v1"
+        ]
+      ]
+    }
+  ]
+}

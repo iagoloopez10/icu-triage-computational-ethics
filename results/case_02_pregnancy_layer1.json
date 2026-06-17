@@ -1,0 +1,53 @@
+{
+  "case_id": "case_02_pregnancy",
+  "engine": "clingo-5.6.2",
+  "rules_file": "engine/rules.lp",
+  "case_file": "cases/case_02_pregnancy.lp",
+  "seed": 42,
+  "objective_values": {
+    "lives": 2,
+    "life_years": 5840,
+    "qalys": 525600
+  },
+  "n_tied_optimal_models": 2,
+  "selected_model_index": 0,
+  "assigned": [
+    [
+      "p3",
+      "v1"
+    ],
+    [
+      "p1",
+      "v2"
+    ]
+  ],
+  "withdrawn": [],
+  "all_tied_optimal_models": [
+    {
+      "assigned": [
+        [
+          "p3",
+          "v1"
+        ],
+        [
+          "p1",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p1",
+          "v1"
+        ],
+        [
+          "p3",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    }
+  ]
+}

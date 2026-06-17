@@ -1,0 +1,32 @@
+{
+  "case_id": "case_05_healthcare_worker",
+  "engine": "clingo-5.6.2",
+  "rules_file": "engine/rules.lp",
+  "case_file": "cases/case_05_healthcare_worker.lp",
+  "seed": 42,
+  "objective_values": {
+    "lives": 5,
+    "life_years": 2450,
+    "qalys": 220500
+  },
+  "n_tied_optimal_models": 1,
+  "selected_model_index": 0,
+  "assigned": [
+    [
+      "p1",
+      "v1"
+    ]
+  ],
+  "withdrawn": [],
+  "all_tied_optimal_models": [
+    {
+      "assigned": [
+        [
+          "p1",
+          "v1"
+        ]
+      ],
+      "withdrawn": []
+    }
+  ]
+}

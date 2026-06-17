@@ -1,0 +1,105 @@
+{
+  "case_id": "case_04_clinical_tie",
+  "engine": "clingo-5.6.2",
+  "rules_file": "engine/rules.lp",
+  "case_file": "cases/case_04_clinical_tie.lp",
+  "seed": 42,
+  "objective_values": {
+    "lives": 2,
+    "life_years": 4200,
+    "qalys": 378000
+  },
+  "n_tied_optimal_models": 6,
+  "selected_model_index": 5,
+  "assigned": [
+    [
+      "p1",
+      "v1"
+    ],
+    [
+      "p3",
+      "v2"
+    ]
+  ],
+  "withdrawn": [],
+  "all_tied_optimal_models": [
+    {
+      "assigned": [
+        [
+          "p2",
+          "v1"
+        ],
+        [
+          "p1",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p2",
+          "v1"
+        ],
+        [
+          "p3",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p3",
+          "v1"
+        ],
+        [
+          "p1",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p3",
+          "v1"
+        ],
+        [
+          "p2",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p1",
+          "v1"
+        ],
+        [
+          "p2",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    },
+    {
+      "assigned": [
+        [
+          "p1",
+          "v1"
+        ],
+        [
+          "p3",
+          "v2"
+        ]
+      ],
+      "withdrawn": []
+    }
+  ]
+}

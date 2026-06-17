@@ -20,7 +20,6 @@ build/
 .docker/
 
 # Resultados generados
-results/*.json
 results/*.log
 
 # Report intermedios
