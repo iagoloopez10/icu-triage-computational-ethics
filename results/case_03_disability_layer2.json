@@ -1,0 +1,106 @@
+{
+  "case_id": "case_03_disability",
+  "verdict": "indefensible",
+  "semantics": "grounded",
+  "pro_rules_in": [],
+  "pro_rules_out": [
+    "B1"
+  ],
+  "pro_rules_undec": [],
+  "contra_rules_in": [
+    "J1",
+    "NM2"
+  ],
+  "contra_rules_out": [],
+  "contra_rules_undec": [],
+  "labelling_raw": [
+    {
+      "label": "in",
+      "conclusion": "assigned_in_layer1(p2, v1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "best_life_years_assigned(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "disability_permanent(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p1, 40)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p2, 40)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "qaly_decisive(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p1, 40)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p2, 95)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p1, 80)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p2, 80)"
+    },
+    {
+      "label": "in",
+      "conclusion": "discriminatory_exclusion(p1)"
+    },
+    {
+      "label": "out",
+      "conclusion": "serves_individual_beneficence(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "unjust_exclusion(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "undercut(r_J2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "undercut(r_J2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "'-'(serves_individual_beneficence(p2))"
+    },
+    {
+      "label": "in",
+      "conclusion": "'-'(serves_individual_beneficence(p2))"
+    }
+  ]
+}

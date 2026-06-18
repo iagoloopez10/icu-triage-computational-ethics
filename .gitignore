@@ -22,6 +22,9 @@ build/
 # Resultados generados
 results/*.log
 
+# Ficheros .arg2p generados dinámicamente por layer2_inject.py
+infra/arg2p/examples/layer2_*.arg2p
+
 # Report intermedios
 report/*.aux
 report/*.log

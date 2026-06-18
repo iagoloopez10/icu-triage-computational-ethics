@@ -1,0 +1,116 @@
+{
+  "case_id": "case_04_clinical_tie",
+  "verdict": "defensible",
+  "semantics": "grounded",
+  "pro_rules_in": [
+    "B1",
+    "J2"
+  ],
+  "pro_rules_out": [],
+  "pro_rules_undec": [],
+  "contra_rules_in": [],
+  "contra_rules_out": [],
+  "contra_rules_undec": [],
+  "labelling_raw": [
+    {
+      "label": "in",
+      "conclusion": "assigned_in_layer1(p1, v1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "assigned_in_layer1(p3, v2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "best_life_years_assigned(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "best_life_years_assigned(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p1, 30)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p2, 30)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p3, 30)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "qaly_decisive(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p1, 90)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p2, 90)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p3, 90)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p1, 70)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p2, 70)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p3, 70)"
+    },
+    {
+      "label": "in",
+      "conclusion": "tied_optimal_gt1"
+    },
+    {
+      "label": "in",
+      "conclusion": "procedural_fairness"
+    },
+    {
+      "label": "in",
+      "conclusion": "serves_individual_beneficence(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "serves_individual_beneficence(p3)"
+    }
+  ]
+}

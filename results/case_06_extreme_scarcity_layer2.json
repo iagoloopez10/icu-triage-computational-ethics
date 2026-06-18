@@ -1,0 +1,143 @@
+{
+  "case_id": "case_06_extreme_scarcity",
+  "verdict": "defensible",
+  "semantics": "grounded",
+  "pro_rules_in": [
+    "B1"
+  ],
+  "pro_rules_out": [],
+  "pro_rules_undec": [],
+  "contra_rules_in": [],
+  "contra_rules_out": [],
+  "contra_rules_undec": [],
+  "labelling_raw": [
+    {
+      "label": "in",
+      "conclusion": "assigned_in_layer1(p1, v1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "best_life_years_assigned(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p4)"
+    },
+    {
+      "label": "in",
+      "conclusion": "idsa_eligible(p5)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p1, 50)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p2, 22)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p3, 40)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p4, 18)"
+    },
+    {
+      "label": "in",
+      "conclusion": "life_expectancy_years(p5, 45)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p4)"
+    },
+    {
+      "label": "in",
+      "conclusion": "not_assigned_in_layer1(p5)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p1)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p2)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p3)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p4)"
+    },
+    {
+      "label": "in",
+      "conclusion": "patient(p5)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p1, 95)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p2, 80)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p3, 90)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p4, 75)"
+    },
+    {
+      "label": "in",
+      "conclusion": "quality_weight_centi(p5, 92)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p1, 85)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p2, 55)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p3, 75)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p4, 50)"
+    },
+    {
+      "label": "in",
+      "conclusion": "survival_prob_pct(p5, 80)"
+    },
+    {
+      "label": "in",
+      "conclusion": "serves_individual_beneficence(p1)"
+    }
+  ]
+}

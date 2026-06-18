@@ -1,0 +1,46 @@
+% Layer 2 — Arg2P ethical audit
+% Tabla A: 10 rules + attack bridges + preferences + undercuts
+% Facts are injected dynamically by layer2_inject.py
+
+% NOTA: en este motor (Arg2P-KT 0.15.0) las variables anónimas _ en
+% predicados de aridad >= 2 pueden suprimir la detección de rebut entre
+% reglas que comparten ese predicado. Convención de este fichero:
+% evitar _ en cualquier argumento de predicado de aridad >= 2.
+% Bug verificado con tests aislados durante el desarrollo de Layer 2.
+
+% ── TABLA A: REGLAS DEFEASIBLES ──────────────────────────────────────────────
+
+r_F1  : withdrawn_in_layer1(P,V)                                    => violates_fidelity(P).
+r_NM1 : withdrawn_in_layer1(P,V)                                    => active_harm(P).
+r_NM2 : disability_permanent(P), qaly_decisive(P)                   => discriminatory_exclusion(P).
+r_J1  : disability_permanent(P), qaly_decisive(P)                   => unjust_exclusion(P).
+r_J2  : tied_optimal_gt1                                            => procedural_fairness.
+r_J3  : instrument_factor_gt1(P), assigned_in_layer1(P,V)          => violates_equal_consideration(P).
+r_B1  : assigned_in_layer1(P,V), best_life_years_assigned(P)       => serves_individual_beneficence(P).
+r_B2  : healthcare_worker(P), assigned_in_layer1(P,V)              => serves_aggregate_beneficence(P).
+r_B3  : gestational_24_plus(P), not_assigned_in_layer1(P)          => unattended_third_party(P).
+r_G1  : healthcare_worker(P), assigned_in_layer1(P,V)              => merits_gratitude(P).
+
+% ── UNDERCUTS PARA J2 ────────────────────────────────────────────────────────
+
+u_J2_a : discriminatory_exclusion(_) => undercut(r_J2).
+u_J2_b : unjust_exclusion(_)         => undercut(r_J2).
+
+% ── REGLAS PUENTE DE ATAQUE ──────────────────────────────────────────────────
+% Cross-patient attacks: body fires for excluded patient, conclusion targets
+% the assigned patient Q. Q is bound via assigned_in_layer1(Q,_).
+
+r_attack_F1_B1  : violates_fidelity(P),        assigned_in_layer1(Q,V) => -serves_individual_beneficence(Q).
+r_attack_NM1_B1 : active_harm(P),              assigned_in_layer1(Q,V) => -serves_individual_beneficence(Q).
+r_attack_NM2_B1 : discriminatory_exclusion(P), assigned_in_layer1(Q,V) => -serves_individual_beneficence(Q).
+r_attack_J1_B1  : unjust_exclusion(P),         assigned_in_layer1(Q,V) => -serves_individual_beneficence(Q).
+r_attack_B3_B1  : unattended_third_party(P),   assigned_in_layer1(Q,V) => -serves_individual_beneficence(Q).
+
+% Same-patient attacks: P is the assigned healthcare worker.
+r_attack_J3_B2 : violates_equal_consideration(P) => -serves_aggregate_beneficence(P).
+r_attack_J3_G1 : violates_equal_consideration(P) => -merits_gratitude(P).
+
+% ── PREFERENCIAS ─────────────────────────────────────────────────────────────
+
+sup(r_attack_NM2_B1, r_B1).
+sup(r_attack_J1_B1,  r_B1).
