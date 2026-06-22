@@ -3,7 +3,7 @@
 % Facts are injected dynamically by layer2_inject.py
 
 
-% ── TABLE A: DEFEASIBLE RULES ────────────────────────────────────────────────
+% ── TABLE A: DEFEASIBLE RULES ────────────────────────────────────────────
 
 r_F1  : withdrawn_in_layer1(P,V)                                    => violates_fidelity(P).
 r_NM1 : withdrawn_in_layer1(P,V)                                    => active_harm(P).
@@ -16,7 +16,7 @@ r_B2  : healthcare_worker(P), assigned_in_layer1(P,V)              => serves_agg
 r_B3  : gestational_24_plus(P), not_assigned_in_layer1(P)          => unattended_third_party(P).
 r_G1  : healthcare_worker(P), assigned_in_layer1(P,V)              => merits_gratitude(P).
 
-% ── UNDERCUTS FOR J2 ─────────────────────────────────────────────────────────
+% ── UNDERCUTS FOR J2 ────────────────────────────────────────────────────────────
 
 u_J2_a : discriminatory_exclusion(_) => undercut(r_J2).
 u_J2_b : unjust_exclusion(_)         => undercut(r_J2).
@@ -35,7 +35,7 @@ r_attack_B3_B1  : unattended_third_party(P),   assigned_in_layer1(Q,V) => -serve
 r_attack_J3_B2 : violates_equal_consideration(P) => -serves_aggregate_beneficence(P).
 r_attack_J3_G1 : violates_equal_consideration(P) => -merits_gratitude(P).
 
-% ── PREFERENCES ──────────────────────────────────────────────────────────────
+% ── PREFERENCES ────────────────────────────────────────────────────────────
 
 sup(r_attack_NM2_B1, r_B1).
 sup(r_attack_J1_B1,  r_B1).

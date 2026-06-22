@@ -1,7 +1,6 @@
 {
   "id": "case_00_smoketest",
   "description": "Three IDSA-eligible patients, two ventilators. Smoketest of the lexicographic hierarchy. Expected winner: {p2, p3}.",
-  "facts_file": "cases/case_00_smoketest.lp",
   "lottery_seed": 42,
   "expected_assigned_patients": ["p2", "p3"]
 }

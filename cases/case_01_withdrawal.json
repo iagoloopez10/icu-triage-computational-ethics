@@ -1,7 +1,6 @@
 {
   "id": "case_01_withdrawal",
   "description": "Withdrawing ventilator from a stable patient to reassign it to a newcomer with better expected outcomes.",
-  "facts_file": "cases/case_01_withdrawal.lp",
   "lottery_seed": 42,
   "ross_duties_at_stake": ["fidelity", "non_maleficence", "beneficence"],
   "expected_layer1_decision": {

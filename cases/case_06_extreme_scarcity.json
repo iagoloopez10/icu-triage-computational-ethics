@@ -1,7 +1,6 @@
 {
   "id": "case_06_extreme_scarcity",
   "description": "Five eligible patients, one ventilator. The individual decision is outcome-driven, but the scale of denied care should itself trigger Layer 2 to flag for human deliberation.",
-  "facts_file": "cases/case_06_extreme_scarcity.lp",
   "lottery_seed": 42,
   "ross_duties_at_stake": ["beneficence", "justice", "non_maleficence"],
   "expected_layer1_decision": {

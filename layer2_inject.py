@@ -13,10 +13,10 @@ from pathlib import Path
 
 # ── PREDICATES FORWARDED FROM .lp ────────────────────────────────────────────
 LP_PREDICATES = {
-    "patient", "idsa_eligible", "disability_permanent",
-    "healthcare_worker", "already_assigned", "gestational_weeks",
+    "disability_permanent",
+    "healthcare_worker", "gestational_weeks",
     "instrumental_lives_factor", "survival_prob_pct",
-    "life_expectancy_years", "quality_weight_centi",
+    "life_expectancy_years",
 }
 
 INFRA_DIR = Path(__file__).parent / "infra" / "arg2p"

@@ -18,14 +18,6 @@
   "labelling_raw": [
     {
       "label": "in",
-      "conclusion": "already_assigned(p1, v1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "already_assigned(p2, v2)"
-    },
-    {
-      "label": "in",
       "conclusion": "assigned_in_layer1(p2, v2)"
     },
     {
@@ -35,18 +27,6 @@
     {
       "label": "in",
       "conclusion": "best_life_years_assigned(p3)"
-    },
-    {
-      "label": "in",
-      "conclusion": "idsa_eligible(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "idsa_eligible(p2)"
-    },
-    {
-      "label": "in",
-      "conclusion": "idsa_eligible(p3)"
     },
     {
       "label": "in",
@@ -63,30 +43,6 @@
     {
       "label": "in",
       "conclusion": "not_assigned_in_layer1(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p2)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p3)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p1, 85)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p2, 90)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p3, 95)"
     },
     {
       "label": "in",

@@ -1,7 +1,6 @@
 {
   "id": "case_04_clinical_tie",
   "description": "Three patients with identical clinical and outcome profiles. The lexicographic hierarchy cannot distinguish; the lottery is the only ethical tie-breaker.",
-  "facts_file": "cases/case_04_clinical_tie.lp",
   "lottery_seed": 42,
   "ross_duties_at_stake": ["justice", "equal_consideration"],
   "expected_layer1_decision": {

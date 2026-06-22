@@ -1,7 +1,6 @@
 {
   "id": "case_02_pregnancy",
   "description": "Pregnant patient (28 weeks) excluded by Layer 1 due to marginally worse outcomes. Layer 2 must evaluate third-party duty toward the fetus.",
-  "facts_file": "cases/case_02_pregnancy.lp",
   "lottery_seed": 42,
   "ross_duties_at_stake": ["beneficence", "justice", "third_party_consideration"],
   "expected_layer1_decision": {

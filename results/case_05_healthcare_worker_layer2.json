@@ -24,14 +24,6 @@
     },
     {
       "label": "in",
-      "conclusion": "idsa_eligible(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "idsa_eligible(p2)"
-    },
-    {
-      "label": "in",
       "conclusion": "instrument_factor_gt1(p1)"
     },
     {
@@ -49,22 +41,6 @@
     {
       "label": "in",
       "conclusion": "not_assigned_in_layer1(p2)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p2)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p1, 90)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p2, 92)"
     },
     {
       "label": "in",

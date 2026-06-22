@@ -28,14 +28,6 @@
     },
     {
       "label": "in",
-      "conclusion": "idsa_eligible(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "idsa_eligible(p2)"
-    },
-    {
-      "label": "in",
       "conclusion": "life_expectancy_years(p1, 40)"
     },
     {
@@ -48,23 +40,7 @@
     },
     {
       "label": "in",
-      "conclusion": "patient(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "patient(p2)"
-    },
-    {
-      "label": "in",
       "conclusion": "qaly_decisive(p1)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p1, 40)"
-    },
-    {
-      "label": "in",
-      "conclusion": "quality_weight_centi(p2, 95)"
     },
     {
       "label": "in",
