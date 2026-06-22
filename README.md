@@ -36,7 +36,7 @@ icu-triage-computational-ethics/
 ├── infra/                     # Course-provided execution infrastructure
 │   ├── clingo/                # Docker + scripts for Clingo
 │   └── arg2p/                 # Docker + scripts + Kotlin runner for Arg2P-KT
-├── report/                    # Project report (work in progress)
+├── report/                    # Final Project report 
 ├── results/                   # Generated outputs from both layers
 ├── run.sh                     # Layer 1 — run a single case
 ├── run_all.sh                 # Layer 1 — batch over all cases
@@ -60,19 +60,16 @@ outcomes for documentation).
 
 The intellectual core of the project. Two files, one per layer:
 
-- **`rules.lp`** — Layer 1's ASP encoding. Contains four components:
+- **`rules.lp`** — Layer 1's ASP encoding. Contains three components:
   (1) the three-level utilitarian hierarchy that determines how to
   optimise (`@3 lives > @2 life_years > @1 QALYs`), (2) the binary
   IDSA clinical filter that excludes ineligible patients before
-  optimisation, (3) the definitions that convert numeric patient data
-  (age, SOFA, CCI) into clinical categories, and (4) the rule that
-  detects when Layer 1 withdraws ventilation from a previously
-  assigned patient.
+  optimisation, and (3) the rule that detects when Layer 1 withdraws
+  ventilation from a previously assigned patient.
 - **`layer2.arg2p`** — Layer 2's argumentation theory. Ten defeasible
   rules organised by Rossian duty, seven attack-bridge rules, two
   undercuts against procedural justice, and two preferences (the only
-  ethical hierarchies the system commits to). Heavily commented so a
-  reader without programming background can follow the moral logic.
+  ethical hierarchies the system commits to).
 
 ### `infra/` — Course-provided infrastructure
 
@@ -141,8 +138,8 @@ it reflects the architectural independence of the two layers.
 
 ### `report/`
 
-The academic report defending the architecture, the ethical commitments,
-and the design decisions of both layers. Currently a placeholder.
+The final report defending the architecture, the ethical commitments,
+and the design decisions of both layers.
 
 ## Requirements
 

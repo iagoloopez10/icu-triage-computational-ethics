@@ -114,13 +114,13 @@ def generate_arg2p(lp_facts, flag_lines):
     parts.append("")
 
     # LP facts relevant to Layer 2
-    parts.append("% ── HECHOS DEL CASO (.lp) ──")
+    parts.append("% ── CASE FACTS (.lp) ──")
     for pred in sorted(LP_PREDICATES):
         for row in lp_facts.get(pred, []):
             parts.append(emit_fact(pred, row))
 
     parts.append("")
-    parts.append("% ── FLAGS PRECOMPUTADOS ──")
+    parts.append("% ── PRECOMPUTED FLAGS ──")
     parts.extend(flag_lines)
 
     return "\n".join(parts) + "\n"
